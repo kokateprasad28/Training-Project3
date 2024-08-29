@@ -1,0 +1,58 @@
+/* todo.component.css */
+.todo-container {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+.todo-list {
+    margin-top: 20px;
+}
+.todo-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+.todo-item:hover {
+    background-color: #f1f1f1;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    margin:5px;
+}

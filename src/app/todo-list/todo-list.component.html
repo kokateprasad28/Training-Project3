@@ -1,0 +1,31 @@
+<div class="container">
+  <button class="btn btn-dark" style="position:absolute; top:10px; left:5px; " (click)="backToWelcome()">Back</button>
+  <h1 class="text-center">Todo list</h1>
+  <table>
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Description</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let todo of todos; let i = index">
+              <td>{{todo.id}}</td>
+              <td>{{todo.description}}</td>
+              <td>
+                  <button (click)="edit(todo)" class="btn btn-primary">Edit</button>
+                  <button (click)="delete(todo.id)" class="btn btn-danger">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <div class="form-container">
+      <h2>{{isEditing ? 'Edit Todo' : 'Add Todo'}}</h2>
+      <input [(ngModel)]="currentTodo.description" placeholder="Description" />
+      <button (click)="save()" class="btn btn-primary">{{isEditing ? 'Update' : 'Add'}}</button>
+      <button *ngIf="isEditing" (click)="cancel()" class="btn btn-light">Cancel</button>
+  </div>
+  <button class="btn btn-dark" (click)="logout()" style="position:absolute; top:10px; right:5px; ">Logout</button>
+</div>

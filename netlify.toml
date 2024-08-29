@@ -1,0 +1,9 @@
+[build]
+  publish = "dist/my-app"  # Adjust this to your actual dist directory name
+  command = "ng build --prod"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
